@@ -1,0 +1,220 @@
+/*-----------------------------------------------------------------------------------------------------------------------------
+     _                _  _     _                                      _      _                                       _    _
+    | |              ( )| |   | |                                    | |    | |                                     | |  | |
+  __| |  ___   _ __  |/ | |_  | |__    ___    __ _   ___    ___    __| |    | |__    ___    __ _  _ __   ___   __ _ | |_ | |
+ / _` | / _ \ | '_ \    | __| | '_ \  / _ \  / _` | / _ \  / _ \  / _` |    | '_ \  / _ \  / _` || '__| / _ \ / _` || __|| |
+| (_| || (_) || | | |   | |_  | |_) ||  __/ | (_| || (_) || (_) || (_| | _  | |_) ||  __/ | (_| || |   |  __/| (_| || |_ |_|
+ \__,_| \___/ |_| |_|    \__| |_.__/  \___|  \__, | \___/  \___/  \__,_|( ) |_.__/  \___|  \__, ||_|    \___| \__,_| \__|(_)
+                                              __/ |                     |/                  __/ |
+                                             |___/                                         |___/
+ksp----------------------------------------------------------------------------------------------------------------------------
+*/
+
+//========================================//
+// Variables //
+//========================================//
+$main-color: #001871 !default;
+$secondary-color:#1352DE;
+$text-color: #343741 !default;
+$gray: #B1B1B1 !default;
+$crimson:#E81944;
+$black: #000000 !default;
+$white: #ffffff !default;
+$light-gray:#EEEEEE;
+
+// Documentation starts here
+// --------------------------------------------
+// * Global...............Globally-available variables and config.
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-overflow-scrolling: touch;
+}
+
+html {
+  height: 100%;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+::-webkit-input-placeholder,
+input::-webkit-input-placeholder {
+  color: $gray !important;
+}
+
+::-moz-placeholder,
+input::-webkit-input-placeholder {
+  color: $gray !important;
+}
+
+:-ms-input-placeholder,
+input:-ms-input-placeholder {
+  color: $gray !important;
+}
+
+:-moz-placeholder,
+input:-moz-placeholder {
+  color: $gray !important;
+}
+
+/* Let's get this party started */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar {
+  height: 8px;
+  width: 8px;
+  background: $light-gray;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $main-color;
+  -webkit-border-radius: 1ex;
+  -webkit-box-shadow: inset 0 0 6px rgba($main-color, 1);
+}
+
+::-webkit-scrollbar-corner {
+  background: #000;
+}
+
+body.body {
+  font-family: 'Source Sans Pro', sans-serif;
+  // font-family: 'Source Sans Pro';
+  min-height: 100%;
+  display: flex;
+  line-height: 1.5;
+  font-size: 16px;
+  overflow: hidden auto;
+
+
+  a {
+    transition: all 0.3s linear;
+    text-decoration: none;
+    // color: $main-color;
+    &:hover,
+    &:visited,
+    &:focus {
+      outline: none !important;
+      box-shadow: none;
+      text-decoration: none;
+      // color: $main-color;
+
+    }
+  }
+
+  .btn-primary:not(:disabled):not(.disabled):active,
+  .btn {
+        background-color: $secondary-color;
+        border: 1px solid $secondary-color;
+        border-radius: 50px;
+        padding: 12px 20px;
+        transform: perspective(1px) translateZ(0);
+        transition-duration: 0.3s;
+        transition-property: background;
+        color: #fff;
+        // box-shadow: none !important;
+    &:hover {
+      background-color: $main-color;
+      color:$white;
+      border-color: $main-color;
+      box-shadow: 0px 5px 10px -2px rgba($secondary-color, 0.2);
+      outline: none;
+    }
+    &:focus {
+      box-shadow: none;
+      text-decoration: none;
+    }
+    &.medium{
+      padding: 6px 20px;
+    }
+    &.small{
+      padding: 3px 20px;
+    }
+    &.white{
+      background-color: $white;
+      border: 1px solid $secondary-color;
+      color:$secondary-color;
+      &:hover{
+        background-color: $main-color;
+        color:$white;
+        box-shadow: 0px 5px 10px -2px rgba($secondary-color, 0.2);
+        outline: none;
+        border: 1px solid $main-color;
+      }
+    }
+  }
+
+  .container-fluid {
+    // padding: 0 5em;
+  }
+}
+.bg-light-gray{
+  background-color: $light-gray;
+}
+.bg-main{
+  background-color: $main-color;
+}
+.font-weight-semibold{
+  font-weight: 600;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+body {
+  background-color: yellow;
+}
+
+main {
+  position: relative;
+  flex: 1 0 auto;
+}
+
+.padR-0 {
+  padding-right: 0;
+}
+.padL-0 {
+  padding-left: 0;
+}
+.pad-0 {
+  padding: 0;
+}
+.pad-15 {
+  padding: 15px;
+}
+.pd-50 {
+  padding: 50px 0;
+}
+
+// * Global...............Globally-available Reusable LAYOUTS.
+.page-wrapper {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  min-height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+.main {
+  z-index: 2;
+  position: relative;
+}
+
+//* Start Footer *//
+
+// Let the site building begin
+// --------------------------------------------
+
+@import "mixin-variables";
+@import "plugins";
+@import "pages/fonts";
+@import "pages/header";
+@import "pages/home";
+@import "pages/inner-pages";
+@import "pages/responsive";

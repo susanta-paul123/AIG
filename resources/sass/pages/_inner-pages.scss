@@ -1,0 +1,880 @@
+ //   
+.plan-wrapper{
+    // padding-left: 90px;
+    // padding-right: 90px;
+}
+.swiper-slide {
+    background: #fff;
+}
+
+
+  .swiper {
+    width: 100%;
+    // height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+
+  }
+
+  .swiper-slide {
+    background-size: cover;
+    background-position: center;
+  }
+
+  .planSwiper {
+    // height: 80%;
+    width: 100%;
+    
+  }
+
+  .planSwiperTabs {
+    height: 20%;
+    box-sizing: border-box;
+    padding: 10px 0;
+  }
+
+  .planSwiperTabs .swiper-slide {
+    width: 33.333%;
+    height: 100%;
+    opacity: 0.4;
+    text-align: center;
+    padding:10px 15px;
+    border-radius:5px;
+    font-size: 14px;
+  }
+
+  .planSwiperTabs .swiper-slide-thumb-active {
+    opacity: 1;
+    background: #C7DBF4;
+    color:$secondary-color;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .plan-boxes .swiper-slide{
+    //   background-color: $light-gray;
+      
+    //   border-radius: 6px;
+      overflow: hidden;
+  }
+  .planSwiperTabs{
+    display: none;
+  }
+  @media(max-width:991px){
+    .planSwiperTabs{
+      display: block;
+    }
+  }
+ .plan-box, .plan-box2{
+     background-color: $light-gray;
+     position: relative;
+     overflow: hidden;
+     border-radius: 6px;
+     transition: ease all 0.5s;
+     &.gold-plan, &:hover{
+        background-color:$main-color; 
+        .top{
+            
+             h5{
+                 color:$white;
+             }
+             h2{
+                color:$white;
+             }
+         }
+        
+    
+         .plan-desc{
+            color:$white;
+         }
+         .key-coverages{
+           
+             h6{
+                color:$white;
+             }
+             ul{
+               padding: 0;
+                 li{
+                    color:$white;
+    
+                    &:before{
+                       background-image: url('../media/images/checkCircleWhite.svg');
+                    } 
+                    .view-more{
+                        color:$white;
+    
+                    }
+                 }
+             }
+         }
+         .dp-link{
+            color:$white;
+        }
+
+        .download-wrap{
+            border-top:1px solid #2B408D
+        }
+
+        .plus-btn{
+            color:$white;
+            border:2px solid $white;
+            background-color: transparent;
+
+   
+        }
+
+        .show-hide{
+            background: $light-gray;
+            color:$main-color;
+            border:0;
+            width: 100%;
+            padding:10px 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-transform: uppercase;
+            &:after{
+               background-image: url("../media/images/caretCircleDownBlue.svg");
+
+            }
+         
+         }
+         .save-wrap{
+            padding:0 16px 10px;
+            display: none;
+            a{
+               background-color: $white;
+            }
+        }
+.link2{
+          color:$white;
+        }
+        .choose-plan a{
+          background-color: $white;
+          color:$secondary-color;
+          span {
+            svg{
+              path{
+                stroke: $secondary-color;
+              }
+            }
+          }
+          &.selected{
+            color:$white;
+          }
+        }
+
+
+     }//end gold
+     .top{
+        padding:0px 16px;
+         h5{
+             font-weight: 700;
+             color:#5D738D;
+         }
+         h2{
+            font-weight: 700;
+             color:#5D738D;
+             font-size: 34px;
+         }
+     }
+     .prev-price{
+        padding:0px 16px;
+         color:#F68CA2;
+         font-size: 20px;
+         text-decoration: line-through;
+     }
+
+     .plan-desc{
+        padding:0px 16px;
+        color:#5D738D;
+        font-size: 16px;
+        height: 120px;
+     }
+     .link2{
+      color:#5D738D;
+    }
+     .key-coverages{
+        padding:0px 16px;
+         h6{
+             font-weight: 700;
+             color:#5D738D;
+             font-size: 16px;
+             margin-bottom: 20px;
+         }
+         ul{
+           padding: 0;
+             li{
+                 display: flex;
+                 align-items: flex-start;
+                 font-size: 14px;
+                 color:#5D738D;
+                 margin-bottom: 17px;
+                 
+
+                &:before{
+                    content:"";
+                    width: 24px;
+                    height: 24px;
+                    flex:0 0 24px;
+                    display: block;
+                    background-image: url('../media/images/checkCircle.svg');
+                    margin-right: 10px;
+                } 
+                .view-more{
+                    color:$secondary-color;
+                    font-size: 14px;
+                    font-weight: 600;
+
+                }
+             }
+         }
+     }
+     .download-wrap{
+         border-top:1px solid #D7D2CB;
+         padding-top: 15px;
+         padding-bottom: 15px;
+     }
+     .dp-link{
+         font-size: 14px;
+         font-weight: 600;
+         color:$secondary-color;
+         display: block;
+         text-align: center;
+         text-transform: uppercase;
+     }
+
+     .choose-plan{
+        padding:0px 20px;
+        margin-bottom: 20px;
+        a{
+            width: 100%;
+            padding:10px 20px;
+            font-size: 16px;
+            background-color: $secondary-color;
+            display: block;
+            border-radius: 50px;
+            color:$white;
+            text-align: center;
+            text-transform: uppercase;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            &.selected{
+                background-color: #00BF6F;
+            }
+            span{
+              margin-top: -4px;
+            }
+        }
+     }
+
+     .show-hide, .show-hide2{
+        background: #5D738D;
+        color:$white;
+        border:0;
+        width: 100%;
+        padding:10px 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-transform: uppercase;
+        &:after{
+            display: inline-block;
+            content:"";
+            background-image: url("../media/images/caretCircleDown.svg");
+            transform: rotate(0deg);
+            width: 24px;
+            height: 24px;
+
+
+        }
+        &.show_{
+            &:after{
+               transform: rotate(-180deg);
+           }
+        }
+     }
+     .plus-btn{
+         width: 32px;
+         height: 32px;
+         color:$secondary-color;
+         border:2px solid $secondary-color;
+         border-radius: 50%;
+         font-size: 32px;
+         line-height: 10px;
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        display: none;
+
+     }
+     .save-wrap{
+         padding:0 20px 10px;
+        //  display: flex;
+        //  justify-content: space-between;
+         display: none;
+         a{
+            background-color: #D7D2CB;
+            display: block;
+            border-radius:4px;
+            padding:4px 10px;
+            color:#5D738D;
+            font-size: 12px;
+            width: 48%;
+            text-align: center;
+            text-transform: uppercase;
+         }
+     }
+     .ribon{
+         width:300px;
+         height:50px;
+         background-color: $crimson;
+         position: absolute;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         color:$white;
+         font-size: 16px;
+         font-weight: 600;
+         transform: rotate(45deg);
+         right: -100px;
+        top: 25px;
+
+     }
+     
+ }
+
+ .add-success{
+     background-color: #00BF6F;
+     color:$white;
+     padding:10px 15px;
+     border-radius: 4px;
+ }
+
+ .add-{
+    background-color: $white;
+    color:$secondary-color;
+    border:1px solid $secondary-color;
+    padding:10px 15px;
+    border-radius: 4px;
+    &:hover{
+        background-color:$secondary-color;
+        color: $white;
+    }
+
+}
+
+.modal-dialog.viewMore-modal{
+    max-width: 736px;
+  }
+/*  */
+.faq_accordion {
+  
+    margin-bottom: 20px;
+  }
+  
+  .faq_accordion .tab {
+    padding: 15px 20px;
+    position: relative;
+    font-size:14px;
+
+    position: relative;
+    cursor: pointer;
+    border: 1px solid $main-color;
+    border-radius: 6px;
+    background-color: $main-color;
+    color:$white;
+  }
+  
+  .faq_accordion .tab:before {
+    content: "";
+    width: 30px;
+    height: 30px;
+    background-image: url('../media/images/select_dd_arrow2.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 16px;
+    display: block;
+    border-radius: 50%;
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    margin-top: -15px;
+  }
+  
+  .faq_accordion .tab.show:before {
+    transform: rotate(-180deg);
+  }
+  
+  .faq_accordion_wrapper{
+    .faq_accordion{
+        &:first-child{
+            .content{
+                display: block;
+            }
+        }
+    }
+    
+
+  }
+  .faq_accordion .content {
+    display: none;
+    margin-top: 15px;
+    
+    p{
+        color: $secondary-color;
+        font-size: 12px;
+        margin-bottom: 0;
+    }
+    h5 {
+        font-size: 14px;
+        color: $secondary-color;
+        font-weight: 700;
+        margin-bottom: 0;
+
+      }
+
+  }
+  .faq_accordion .content>div{
+    padding: 10px 15px;
+    background: #C7DBF4;
+    border-radius: 6px;
+
+    &.graybg{
+      background-color: #D7D2CB;
+      h5, p{
+        color:#5D738D;
+      }
+      
+    }
+
+  }
+  .faq_accordion_wrapper{
+    .notes{
+      padding: 10px 15px;
+      border-radius: 6px;
+      ul li, p{
+        color:#343741;
+      }
+    }
+  }
+
+  .modal-header .close{
+      background-image: url('../media/images/XCircle-red.svg');
+      background-repeat: no-repeat;
+      width: 18px;
+      height: 18px;
+      opacity: 1;
+      span{
+          font-size: 0;
+
+      }
+  }
+  .mCSB_inside>.mCSB_container{
+      margin-right: 6px!important;
+  }
+  .mCSB_scrollTools{
+      right: 0px!important;
+      width: 4px!important;
+  }
+  .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{
+    background-color: #1352DE!important;
+  }
+  
+  .mCSB_scrollTools .mCSB_draggerRail {
+      width: 4px!important;
+    background-color: #C7DBF4!important;
+  }
+
+  .important-conditions{
+    background-color: $light-gray;
+    border-radius: 4px;
+    ul{
+      padding: 0;
+      transition: ease all 0.5s;
+      li{
+        margin-bottom: 15px;
+        display: flex;
+        align-items: flex-start;
+        &:before{
+          content:"";
+          width: 5px;
+          height: 5px;
+          flex:0 0 5px;
+          color:$black;
+          border-radius: 50%;
+          margin-right: 10px;
+          background-color: $black;
+          margin-top:10px;
+        }
+      }
+    }
+  }
+  .travelers_require{
+    background: #C7DBF4;
+    border-radius: 4px;
+    &.light-gray{
+      background-color: $light-gray;
+    }
+  }
+  .add-doc-area{
+    // background-color: $main-color;
+    border-radius: 4px;
+    display: -webkit-box;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding:70px;
+
+  }
+  .add-doc-btn{
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color:$white;
+    background-color: transparent;
+    border:0;
+  }
+  .travel-left{
+    span{
+      color:$crimson;
+    }
+  }
+  .circle-tick{
+    background-color: #00BF6F;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+  }
+.traveler_{
+.row{
+    border-bottom: 1px solid #D7D2CB;
+  }
+}
+.select-wrap option:checked + span{
+  display: none;
+}
+.person_data{
+  display: none;
+}
+.rm{
+  background-color: transparent;
+  border:0;
+  color:$main-color;
+  text-transform: uppercase;
+  &:before{
+    content:"";
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    border:2px solid $main-color;
+    border-radius: 50%;
+    background-image: url("../media/images/caretCircleDownBlue.svg");
+    background-repeat: no-repeat;
+    background-position:center;
+    margin-right: 10px;
+    position: relative;
+    top: 5px;
+    transform: rotate(-180deg);
+  }
+  &.mrt{
+    &:before{
+      transform: rotate(0deg);
+    }
+  }
+}
+.wrapper_tpdt{
+  height:126px;
+  transition: ease all 0.5s;
+  overflow: hidden;
+  &.collapse_{
+    height:auto;
+  }
+}
+.traveler-plan-detail-table{
+  tr{
+    td{
+      padding-top: 10px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #DCDCDC;
+      font-size: 14px;
+      color:$text-color;
+      &:last-child{
+        text-align: right;
+      }
+      &:first-child{
+        font-weight: 600;
+
+      }
+    }
+  }
+}
+
+.sm{
+  background-color: transparent;
+  border:0;
+  color:$secondary-color;
+  text-transform: uppercase;
+  &:before{
+    content:"";
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    border-radius: 50%;
+    background-image: url("../media/images/caretCircleDownsblue.svg");
+    background-repeat: no-repeat;
+    background-position:center;
+    position: relative;
+    top: 5px;
+    transform: rotate(-180deg);
+  }
+  &.mrt{
+    &:before{
+      transform: rotate(0deg);
+    }
+  }
+}
+.traveler_r{
+  border:1px solid #C7DBF4;
+  .row{
+    border-bottom: 1px solid #C7DBF4;
+  }
+}
+.mtc-{
+  margin-top: -17px;
+}
+.form-checkbox {
+  position: relative;
+  padding-left: 30px;
+  input[type="checkbox"] {
+    position: absolute;
+    height: 100%;
+    opacity: 0;
+    left: 0;
+    width:18px;
+    top: 0;
+    &:checked + label:before {
+      background-image: url('../media/images/tick.svg');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 10px;
+      border: 1px solid $secondary-color;
+      background-color: $secondary-color;
+
+    }
+  }
+  label {
+    padding-left: 0px;
+    position: relative;
+    pointer-events: none;
+    font-size: 16px;
+    margin-bottom: 0;
+    
+    &:before {
+      content: "";
+      display: block;
+
+      height: 16.5px;
+      width: 16.5px;
+      border: 1px solid $gray;
+      position: absolute;
+      top: 5px;
+      left: 0;
+      margin-left: -30px;
+      border-radius: 4px;
+    }
+    span {
+      color: $secondary-color;
+      font-weight: 600;
+     }
+  }
+}
+.border_{
+  border: 1px solid #EEEEEE;
+}
+.rounded6{
+  border-radius: 6px;
+}
+
+// custom select style
+.custom-select-style {
+  position: relative;
+  font-family: Arial;
+  .icon{
+    position: absolute;
+    left: 14px;
+    top: 10px;
+  }
+}
+
+.custom-select-style select {
+  display: none;
+}
+
+.select-selected {
+  background-color: $white;
+  color: $gray;
+  padding: 8px 45px;
+  border: 1px solid $light-gray;
+  cursor: pointer;
+  user-select: none;
+  border-radius: 6px;
+  color:$black;
+
+  &.label{
+    color:$gray;
+  }
+
+  &:after {
+    position: absolute;
+    content: "";
+    top:9px;
+    right: 10px;
+    width:24px;
+    height:24px;
+    background-image: url("../media/images/caretCircleDownBlue.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    transform: rotate(180deg);
+  }
+  &.select-arrow-active{
+    &:after {
+      transform: rotate(-180deg);
+    }
+  }
+}
+.select-items {
+  position: absolute;
+  background-color: $white;
+  color:$black;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  div{
+    background-color: $white;
+    color: $black;
+    padding: 8px 16px;
+    border-bottom: 1px solid $light-gray;
+    cursor: pointer;
+    user-select: none;
+    border-radius: 6px;
+    
+  }
+}
+.select-hide {
+  display: none;
+}
+
+.select-items div:hover, .same-as-selected {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+// end custom select style
+.border-light-blue{
+  background-color: #C7DBF4;
+  opacity: 1;
+}
+.modal-dialog{
+  height: 100%;
+  margin: 0 auto!important;
+  .modal-content{top: 50%; transform: translateY(-50%);}
+}
+.mCustomScrollbar{
+  height: 500px;
+  width: 100%;
+  
+}
+.custom-toast-msg{
+  max-width: 465px;
+  width:calc(100% - 32px);
+  position: fixed;
+  padding:0px;
+  border-radius: 4px;
+  display: none;
+  z-index: 10000;
+  top: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding-right: 72px;
+  p{
+    font-size: 14px;
+    padding: 10px 24px;
+  }
+  &.top{
+    top: 0;
+  }
+  &.left{
+    left: 0;
+  }
+  &.sucess{
+      background-color: #bdf0df;
+      color:#00bf6f;
+}
+  .toast-close{
+    right: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+    // background-image: url("../media/images/XCircle-red.svg");
+    // background-repeat: no-repeat;
+    // background-position: center;
+    position: absolute;
+    background-color: transparent;
+    border:0;
+    // background-size: 14px;
+    color:$crimson;
+    font-size: 14px;
+    line-height: 14px;
+    font-weight: 600;
+    width: 72px;
+    height: 100%;
+    border-left:1px solid rgba(#00bf6f,0.4);
+
+
+  }
+}
+.fzch{
+  font-size: 1.1rem;
+}
+.swiper-button-prev2, .swiper-button-next2{
+  &.swiper-button-disabled{
+    display: none;
+  }
+}
+
+.swiper-button-prev2, .swiper-button-next2{
+  font-size: 14px;
+  font-weight: 600;
+  color:$secondary-color;
+  display: flex;
+  align-items: center;
+}
+.swiper-button-next2{
+  &:after{
+    content:"";
+    width: 16px;
+    height: 24px;
+    background:url('../media/images/caretCircleDownsblue.svg') no-repeat center;
+    transform: rotate(90deg);
+  }
+}
+.swiper-button-prev2{
+  &:before{
+    content:"";
+    width: 16px;
+    height: 24px;
+    background:url('../media/images/caretCircleDownsblue.svg') no-repeat center;
+    transform: rotate(-90deg);
+  }
+}
+  
+  

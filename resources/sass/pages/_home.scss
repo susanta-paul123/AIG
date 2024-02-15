@@ -1,0 +1,596 @@
+// font-family: 'Source Sans Pro', sans-serif;
+
+.main-body{
+    // display: flex;
+    padding-top: 136px;
+
+    main{
+        flex:1;
+        width:calc(100% - 424px);
+        margin-left: 424px;
+        padding-left: 15px;
+        padding-right: 15px;
+
+    }
+}
+
+.screen{
+    max-width:832px;
+    margin:0 auto;
+
+}
+
+.sidebar{
+
+    width:424px;
+    position: fixed;
+    left: 0;
+    top: 136px;
+    background-color: #c1f0e8;
+    height:100vh;
+}
+body{
+    &.body{
+        .modal-header{
+            padding:28px 22px 0px 22px;
+        }
+        .modal-body{
+            padding: 16px 22px 36px;
+        }
+        .modal-dialog.get-modal{
+            padding-left: 16px;
+            padding-right: 16px;
+        }
+        .ui-widget.ui-widget-content{
+            border: 0;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+            background-color: $white;
+            }
+        .ui-widget-header{
+            border:0;
+            background-color: $white;
+        }
+        .ui-datepicker .ui-datepicker-prev, .ui-datepicker .ui-datepicker-next{
+            border:1px solid $gray;
+            border-radius: 50%;
+        }
+        .ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default, .ui-button, html .ui-button.ui-state-disabled:hover, html .ui-button.ui-state-disabled:active{
+            background-color: $white;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            text-align: center;
+        } 
+        .ui-datepicker td{
+            padding: 4px;
+        } 
+        .ui-datepicker {
+            width: 18em;
+            padding: 10px;
+            display: none;
+        } 
+        .ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight{
+            border: 1px solid $main-color;
+            background: $secondary-color;
+            color: $white;
+        }
+        .ui-state-active, .ui-widget-content .ui-state-active{
+            color: $secondary-color;
+        }
+        .ui-datepicker .ui-datepicker-prev .ui-icon{
+            background-image: url('../media/images/caretCircleDownBlue.svg');
+            background-position: center;
+            background-repeat: no-repeat;
+            transform: rotate(-90deg);
+        } 
+        .ui-datepicker .ui-datepicker-next .ui-icon{
+            background-image: url('../media/images/caretCircleDownBlue.svg');
+            background-position: center;
+            background-repeat: no-repeat;
+            transform: rotate(90deg);
+        }
+    }
+}
+
+
+.steps{
+    p{
+        font-weight: 700;
+        color:$text-color;
+        span{
+            color:$crimson;
+    }
+}
+
+hr{
+    background-color: #EBE9E5;
+    opacity: 1;
+}
+
+    ul{
+        padding: 0;
+        li{
+            position: relative;
+            z-index: 1;
+            width:28px;
+            height: 28px;
+            background-color: #C7DBF4;
+            border-radius:50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+
+            &:before{
+                content:"";
+                width: 34px;
+                height: 34px;
+                flex:0 0 34px;
+                border-radius: 50%;
+                border:3px solid #C7DBF4;
+                position: absolute;
+                left: 50%;
+                top:50%;
+                transform: translate(-50%, -50%);
+            }
+            &.active{
+                background-color: $secondary-color;
+                path{
+                    stroke: $white;
+                }
+                &:before{
+                    border:1px dashed $main-color; 
+
+                }
+            }
+            &.completed{
+                background: #00BF6F;
+                path{
+                    stroke: $white;
+                }
+                &:before{
+                    border:3px solid #00BF6F; 
+
+                }
+            }
+        }
+        &:after{
+            content:"";
+            width: 100%;
+            height: 2px;
+            background-color: #C7DBF4;
+            position: absolute;
+            top:50%;
+            left: 0;
+            z-index: 0;
+        }
+    }
+}
+.px-90{
+    // padding-left: 90px;
+    // padding-right: 90px;
+}
+.form_wrapper{
+    .form_container{
+        &:first-child{
+            display: block;
+        }
+    }
+}
+.trip-tabs{
+    .nav{
+        background-color: #eeeeee;
+        border-radius: 50px;
+        .nav-item{
+            width: 50%;
+            .nav-link{
+                background-color: #eee;
+                border-radius: 50px;
+                margin: 0;
+                text-align: center;
+                text-transform: uppercase;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                font-weight: 600;
+                color:$text-color;
+                &.active{
+                    background-color: $main-color;
+                    color:$white;
+
+                }
+            }
+        }
+        
+    }
+}
+.tooltips{
+    display: inline-block;
+    margin-left: 10px;
+    position: relative;
+
+    cursor: pointer;
+    .tooltip-box{
+        position: absolute;
+        width: 300px;
+        border-radius: 6px;
+        background-color: #eee;
+        padding:10px;
+        // top:100%;
+        display: none;
+        box-shadow:0px 0px 10px rgba(0,0,0,0.1);
+        z-index: 99;
+        &:before{
+            content:"";
+            border-bottom:10px solid #eee;
+            border-left:10px solid transparent;
+            border-right:10px solid transparent;
+            position: absolute;
+            top:-9px;
+
+        }
+
+        p{
+            font-size: 13px;
+            margin-bottom: 0;
+        }
+        
+    }
+    &:hover{
+        .tooltip-box{
+            display: block;
+        } 
+    }
+    &.bottom{
+        .tooltip-box{
+            top:100%;
+            top:calc(100% + 10px);
+        }
+    }
+    &.top{
+        .tooltip-box{
+            bottom:calc(100% + 10px);
+            &:before{
+                
+                top:auto;
+                bottom:-9px;
+                transform:translateX(-50%) rotate(-180deg)!important;
+
+            }
+
+        }
+    }
+    &.center{
+        .tooltip-box{
+            left: 50%;
+            transform: translateX(-50%);
+            &:before{
+                left:50%;
+                transform: translateX(-50%);
+            }
+        }
+   }
+   &.right{
+        .tooltip-box{
+            left: 0%;
+            transform: translateX(-80%);
+            &:before{
+                left:80%;
+            }
+        }
+    
+    }
+
+}
+.custom-radiobox{
+    position: relative;
+
+    input[type="radio"]{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+
+        &:checked+label{
+            &:after{
+                content:"";
+                width: 10px;
+                height: 10px;
+                border-radius:50%;
+                background-color: $secondary-color;
+                position: absolute;
+                left: 5px;
+                top: 7px;
+                display: block;
+            }
+
+        }
+
+        +label{
+            display: block;
+            position: relative;
+            padding-left: 28px;
+            pointer-events: none;
+            margin-bottom: 0;
+            &:before{
+                content:"";
+                width: 20px;
+                height: 20px;
+                display: block;
+                border-radius: 50%;
+                border:2px solid $secondary-color;
+                position: absolute;
+                left: 0;
+                top: 2px;
+    
+            }
+        }
+    }
+
+}
+
+.form_container{
+    display: none;
+}
+.form-fields{
+    span.icon {
+        top: 9px;
+        left:12px;
+        width: 24px;
+        height: 24px;
+        z-index: 2;
+        margin-right: 10px;
+      
+        img{
+            vertical-align: top;
+            }
+      }
+}
+.form-input {
+    position: relative;
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="tel"] {
+      width: 100%;
+      border: 1px solid $light-gray;
+      border-radius: 6px;
+      background-color: transparent;
+      padding: 8px 0px 8px 46px;
+      transition: ease all 0.5s;
+      &:focus {
+        box-shadow: 0px 5px 10px -2px rgba($secondary-color, 0.2);
+        outline: none;
+        border: 1px solid $main-color;
+      }
+      &.error{
+          border:1px solid $crimson;
+
+      }
+    }
+    textarea {
+      width: 100%;
+      border: 1px solid $light-gray;
+      border-radius: 6px;
+      background-color: transparent;
+      padding: 7px 0px 5px 20px;
+      transition: ease all 0.5s;
+      resize: none;
+      height: 100px;
+      &:focus {
+        box-shadow: 0px 10px 10px -2px rgba(0, 0, 0, 0.2);
+        border-bottom: 1px solid #000;
+        outline: none;
+      }
+    }
+    span.icon {
+      position: absolute;
+      display: block;
+      top: 9px;
+      left:12px;
+      width: 24px;
+      height: 24px;
+      z-index: 2;
+      &.right{
+        right:95px; 
+        left:auto;
+      }
+      img{
+          vertical-align: top;
+
+      }
+    }
+    .select-wrap {
+      position: relative;
+      select {
+        border: 1px solid #EEEEEE;
+        border-radius: 6px;
+        background-color: transparent;
+        padding: 10px 0px 8px 45px;
+        width: 100%;
+        &:focus {
+          box-shadow: none;
+          outline: none;
+        }
+      }
+      .label{
+        position: absolute;
+        width: calc(100% - 75px);
+        background-color: #fff;
+        left: 45px;
+        top: 1px;
+        border-radius: 4px;
+        color:$gray;
+        line-height: 38px;
+        pointer-events: none;
+      }
+      &:before {
+        background-color: $white;
+        height: calc(100% - 2px);
+        width: 30px;
+        position: absolute;
+        content: "";
+        right:1px;
+        top: 1px;
+        background-image: url('../media/images/caretCircleDownBlue.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+        pointer-events: none;
+        border-radius: 5px;
+      }
+      
+    }
+    .icon {
+      svg {
+        width: 18px;
+        position: relative;
+        path {
+          // stroke: $para;
+        }
+      }
+    }
+    &.datePicker{
+        input[type="text"]{
+            border:0;
+            &::-webkit-input-placeholder { 
+                color: #1352DE!important;
+                font-weight: 600;
+              }
+              
+              &:-ms-input-placeholder {
+                color: #1352DE!important;
+                font-weight: 600;
+              }
+              
+              &::placeholder {
+                color: #1352DE!important;
+                font-weight: 600;
+              }
+        }
+
+        &.right{
+            input[type="text"]{
+                text-align: right;
+                padding-right: 15px;
+              }
+            
+        }
+      
+    }
+  }
+  .form-input_{
+      border:0;
+      width: 100%;
+      &:focus{
+          outline: none;
+      }
+  }
+  .middle-calendar{
+      width: 28px!important;
+      height: 28px;
+      flex:0 0 28px;
+      border-radius: 50%;
+      background-color: #C7DBF4;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      display: flex;
+      padding: 5px!important;
+      align-items: center;
+      justify-content: center;
+      &.right{
+        padding: 2px!important;
+        background-color: transparent;
+        left: auto;
+        right:27px;
+        transform:unset;
+        margin-top: -12px;
+        pointer-events: none;
+
+      }
+   }
+  .field-info{
+      position: absolute;
+      right:30px;
+      top: 7px;
+  }
+  .apply_btn{
+    background-color: #C7DBF4;
+    color: $secondary-color;
+    border: 0;
+    border-radius: 5px;
+    padding: 3px 15px;
+    font-weight: 600;
+    &:hover{
+        background-color: $main-color;
+        color:$white;
+    }
+    &.position{
+        position: absolute;
+        right: 30px;
+        top: 6px;
+    }
+  }
+  .link{
+      color:$secondary-color;
+      
+  }
+  .link-secondary{
+    color:$secondary-color!important;
+}
+  .modal-dialog.get-modal{
+    max-width: 736px;
+  }
+  .get-box{
+      background-color: #EEEEEE;
+      border-radius:10px;
+      margin-bottom: 15px;
+      .get-box-bottom{
+          background-color: #C7DBF4;
+          border-radius:5px;
+      }
+      h2{
+          font-size: 24px;
+          font-weight: 700;
+        }
+  }
+  .pay-tag{
+      background-color: $crimson;
+      padding:5px 15px;
+      border-radius: 6px;
+      font-size: 12px;
+      color:$white;
+      display: inline-block;
+  }
+  .pc-txt{
+      font-size: 13px;
+      color:$main-color;
+  }
+  .promo-code-boxes{
+      padding: 0;
+      li{
+          input{
+              width: 30px;
+              height: 30px;
+              border: 0;
+              background-color: $main-color;
+              color:$white;
+              text-align: center;
+              &:focus{
+                  outline: none;
+                  border: 0;
+              }
+          }
+      }
+  }
+
+  .next-prev-wrap{
+      button{
+          flex:0 0 calc(50% - 15px);
+          width:calc(50% - 15px);
+      }
+  }
+  #payment-submit{
+      display: none;
+  }
+
